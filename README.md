@@ -73,7 +73,7 @@ bun dev`
 <br>
 
 ## 폴더 구조
-
+```
 📦src
  ┣ 📂apis
  ┃ ┣ 📂auction
@@ -407,7 +407,7 @@ bun dev`
  ┗ 📂utils
  ┃ ┣ 📜usePushNotification.tsx
  ┃ ┗ 📜useThrottle.ts
-
+```
 ---
 
 <br>
