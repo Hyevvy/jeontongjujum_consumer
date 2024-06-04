@@ -74,6 +74,340 @@ bun dev`
 
 ## 폴더 구조
 
+📦src
+ ┣ 📂apis
+ ┃ ┣ 📂auction
+ ┃ ┃ ┣ 📜auctionAPIService.ts
+ ┃ ┃ ┗ 📜auctionAPIService.types.ts
+ ┃ ┣ 📂authentication
+ ┃ ┃ ┣ 📜authenticationAPIService.ts
+ ┃ ┃ ┗ 📜authenticationAPIService.types.ts
+ ┃ ┣ 📂consumer
+ ┃ ┃ ┣ 📜consumerAPIService.ts
+ ┃ ┃ ┗ 📜consumerAPIservice.types.ts
+ ┃ ┣ 📂coupon
+ ┃ ┃ ┣ 📜couponAPIService.ts
+ ┃ ┃ ┗ 📜couponAPIService.types.ts
+ ┃ ┣ 📂notification
+ ┃ ┃ ┣ 📜notificationAPIService.ts
+ ┃ ┃ ┗ 📜notificationAPIService.types.ts
+ ┃ ┣ 📂order
+ ┃ ┃ ┣ 📜orderAPIService.ts
+ ┃ ┃ ┗ 📜orderAPIService.types.ts
+ ┃ ┣ 📂payment
+ ┃ ┃ ┣ 📜paymentAPIService.ts
+ ┃ ┃ ┗ 📜paymentAPIService.types.ts
+ ┃ ┣ 📂product
+ ┃ ┃ ┣ 📜productAPIService.ts
+ ┃ ┃ ┗ 📜productAPIService.types.ts
+ ┃ ┣ 📂review
+ ┃ ┃ ┣ 📜reviewAPIService.ts
+ ┃ ┃ ┗ 📜reviewAPIService.types.ts
+ ┃ ┣ 📂search
+ ┃ ┃ ┣ 📜searchAPIService.ts
+ ┃ ┃ ┗ 📜searchAPIService.types.ts
+ ┃ ┣ 📂seller
+ ┃ ┃ ┣ 📜sellerAPIService.ts
+ ┃ ┃ ┗ 📜sellerAPIService.types.ts
+ ┃ ┣ 📂storage
+ ┃ ┃ ┣ 📜storageAPIService.ts
+ ┃ ┃ ┗ 📜storageAPIservice.types.ts
+ ┃ ┣ 📂wishCart
+ ┃ ┃ ┣ 📜wishAPIService.ts
+ ┃ ┃ ┗ 📜wishAPIService.types.ts
+ ┃ ┗ 📜common.ts
+ ┣ 📂app
+ ┃ ┣ 📂(loginLayout)
+ ┃ ┃ ┣ 📂init
+ ┃ ┃ ┃ ┣ 📂adult
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂callback
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂findMyPassword
+ ┃ ┃ ┃ ┃ ┣ 📜findMyPassword.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂logout
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂signin
+ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜signin.module.css
+ ┃ ┃ ┃ ┗ 📂signup
+ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜signup.module.css
+ ┃ ┃ ┗ 📜layout.tsx
+ ┃ ┣ 📂(mainLayout)
+ ┃ ┃ ┣ 📂_component
+ ┃ ┃ ┃ ┣ 📂CategoryHeader
+ ┃ ┃ ┃ ┃ ┣ 📜CategoryHeader.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜CategoryHeader.tsx
+ ┃ ┃ ┃ ┣ 📂Cost
+ ┃ ┃ ┃ ┃ ┗ 📜CostContainer.tsx
+ ┃ ┃ ┃ ┣ 📂CouponBox
+ ┃ ┃ ┃ ┃ ┣ 📜CouponBox.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜CouponBox.tsx
+ ┃ ┃ ┃ ┣ 📂Crop
+ ┃ ┃ ┃ ┃ ┣ 📜CropContainer.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜CropContainer.tsx
+ ┃ ┃ ┃ ┣ 📂Footer
+ ┃ ┃ ┃ ┃ ┣ 📜Footer.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜Footer.tsx
+ ┃ ┃ ┃ ┣ 📂Header
+ ┃ ┃ ┃ ┃ ┣ 📜Header.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜Header.tsx
+ ┃ ┃ ┃ ┣ 📂Holiday
+ ┃ ┃ ┃ ┃ ┗ 📜HolidayContainer.tsx
+ ┃ ┃ ┃ ┣ 📂MemberShipBox
+ ┃ ┃ ┃ ┃ ┣ 📜MemberShipBox.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜membershipBox.module.css
+ ┃ ┃ ┃ ┣ 📂Noti
+ ┃ ┃ ┃ ┃ ┣ 📜Noti.module.scss
+ ┃ ┃ ┃ ┃ ┗ 📜Noti.tsx
+ ┃ ┃ ┃ ┣ 📂PaidMemberShipBox
+ ┃ ┃ ┃ ┃ ┣ 📜PaidMemberShipBox.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜PaidMemberShipBox.tsx
+ ┃ ┃ ┃ ┣ 📂PointCreditBox
+ ┃ ┃ ┃ ┃ ┣ 📜PointCreditBox.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜PointCreditBox.tsx
+ ┃ ┃ ┃ ┣ 📂ProductContainer
+ ┃ ┃ ┃ ┃ ┣ 📜ProductContainer.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜ProductContainer.tsx
+ ┃ ┃ ┃ ┣ 📂QualityInput
+ ┃ ┃ ┃ ┃ ┗ 📜QualityInput.tsx
+ ┃ ┃ ┃ ┣ 📂Seller
+ ┃ ┃ ┃ ┃ ┗ 📜PopularContainer.tsx
+ ┃ ┃ ┃ ┣ 📂SoPTBox
+ ┃ ┃ ┃ ┃ ┣ 📜SoPTBox.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜SoPTBox.tsx
+ ┃ ┃ ┃ ┗ 📜RQProvider.tsx
+ ┃ ┃ ┣ 📂auction
+ ┃ ┃ ┃ ┣ 📂[auctionId]
+ ┃ ┃ ┃ ┃ ┣ 📜auction.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┗ 📂list
+ ┃ ┃ ┃ ┃ ┣ 📜auctionList.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂category
+ ┃ ┃ ┃ ┗ 📂[categoryId]
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂event
+ ┃ ┃ ┃ ┣ 📂cost
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂crop
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┗ 📂holiday
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂membership
+ ┃ ┃ ┃ ┣ 📂buy
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂list
+ ┃ ┃ ┃ ┃ ┣ 📜membershiplist.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┗ 📜membership.module.css
+ ┃ ┃ ┣ 📂mypage
+ ┃ ┃ ┃ ┣ 📂_component
+ ┃ ┃ ┃ ┃ ┣ 📂MyAddressAddBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyAddressAddBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyAddressAddBox.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyAddressBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyAddressBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyAddressBox.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyAuctionBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyAuctionBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyAuctionBox.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyAuctionList
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyAuctionList.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyCartBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyCartBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyCartBox.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyCartList
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyCartList.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyInfoBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyInfoBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyInfoBox.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyOrderBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyOrderBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyOrderBox.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyOrderList
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyOrderList.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyReviewBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜MyReviewBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyReviewBox.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyReviewList
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyReviewList.tsx
+ ┃ ┃ ┃ ┃ ┣ 📂MyWishList
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜MyWishList.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜MyList.module.css
+ ┃ ┃ ┃ ┣ 📂_lib
+ ┃ ┃ ┃ ┃ ┣ 📜getMyAuctionList.ts
+ ┃ ┃ ┃ ┃ ┣ 📜getMyCartList.ts
+ ┃ ┃ ┃ ┃ ┣ 📜getMyCouponList.ts
+ ┃ ┃ ┃ ┃ ┣ 📜getMyWishList.ts
+ ┃ ┃ ┃ ┃ ┗ 📜useGetMyInfiniteCartList.ts
+ ┃ ┃ ┃ ┣ 📂credit
+ ┃ ┃ ┃ ┃ ┣ 📂buy
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📂list
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜creditList.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂myaddress
+ ┃ ┃ ┃ ┃ ┣ 📜myaddress.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂myauction
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂mycart
+ ┃ ┃ ┃ ┃ ┣ 📜mycart.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂mycoupon
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂myinfo
+ ┃ ┃ ┃ ┃ ┣ 📂_component
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂EditMyInfo
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EditMyInfo.tsx
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂EditMyPassword
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜EditMyPassword.tsx
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂Withdraw
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜Withdraw.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜myinfo.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂myorder
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂myreview
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂mywish
+ ┃ ┃ ┃ ┃ ┣ 📜mywish.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┣ 📂point
+ ┃ ┃ ┃ ┃ ┗ 📂list
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜pointList.module.css
+ ┃ ┃ ┃ ┣ 📜mypage.module.css
+ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂order
+ ┃ ┃ ┃ ┣ 📂order-fail
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┃ ┗ 📂order-success
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂orderdetail
+ ┃ ┃ ┃ ┗ 📂[ordersId]
+ ┃ ┃ ┃ ┃ ┣ 📜orderDetail.module.css
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂payment
+ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┗ 📜payment.module.css
+ ┃ ┃ ┣ 📂product
+ ┃ ┃ ┃ ┣ 📂[productId]
+ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜product.module.css
+ ┃ ┃ ┃ ┣ 📂_component
+ ┃ ┃ ┃ ┃ ┗ 📂ProductReviewContainer
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜ProductReviewContainer.tsx
+ ┃ ┃ ┃ ┗ 📂list
+ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜productList.module.css
+ ┃ ┃ ┣ 📂review
+ ┃ ┃ ┃ ┣ 📂_component
+ ┃ ┃ ┃ ┃ ┗ 📂ProductReviewBox
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ProductReviewBox.module.css
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜ProductReviewBox.tsx
+ ┃ ┃ ┃ ┗ 📂create
+ ┃ ┃ ┃ ┃ ┗ 📂[productId]
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂[productOrderId]
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜page.module.css
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂search
+ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂seller
+ ┃ ┃ ┃ ┣ 📂[sellerId]
+ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜seller.module.css
+ ┃ ┃ ┃ ┣ 📂_component
+ ┃ ┃ ┃ ┃ ┣ 📜AllProducts.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜AllShorts.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜Seller.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜SellerInfo.tsx
+ ┃ ┃ ┃ ┃ ┣ 📜SellerList.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜sellerList.module.css
+ ┃ ┃ ┃ ┣ 📂_lib
+ ┃ ┃ ┃ ┃ ┗ 📜getSellerList.ts
+ ┃ ┃ ┃ ┗ 📂list
+ ┃ ┃ ┃ ┃ ┗ 📜page.tsx
+ ┃ ┃ ┣ 📂shorts
+ ┃ ┃ ┃ ┣ 📂[id]
+ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜shortsDetail.module.css
+ ┃ ┃ ┃ ┗ 📂list
+ ┃ ┃ ┃ ┃ ┣ 📜page.tsx
+ ┃ ┃ ┃ ┃ ┗ 📜shortsList.module.css
+ ┃ ┃ ┣ 📜globals.css
+ ┃ ┃ ┗ 📜layout.tsx
+ ┃ ┣ 📂_component
+ ┃ ┃ ┣ 📂CartButton
+ ┃ ┃ ┃ ┣ 📜CartButton.module.css
+ ┃ ┃ ┃ ┗ 📜CartButton.tsx
+ ┃ ┃ ┣ 📂ConceptCard
+ ┃ ┃ ┃ ┗ 📜ConceptCard.tsx
+ ┃ ┃ ┣ 📂Loading
+ ┃ ┃ ┃ ┣ 📜Loading.module.css
+ ┃ ┃ ┃ ┗ 📜Loading.tsx
+ ┃ ┃ ┣ 📂RateCard
+ ┃ ┃ ┃ ┗ 📜RateCard.tsx
+ ┃ ┃ ┣ 📂RawMaterialCard
+ ┃ ┃ ┃ ┣ 📜RawMaterialCard.module.css
+ ┃ ┃ ┃ ┗ 📜RawMaterialCard.tsx
+ ┃ ┃ ┣ 📂Select
+ ┃ ┃ ┃ ┣ 📜Select.module.css
+ ┃ ┃ ┃ ┗ 📜Select.tsx
+ ┃ ┃ ┣ 📂SnackCard
+ ┃ ┃ ┃ ┣ 📜SnackCard.module.css
+ ┃ ┃ ┃ ┗ 📜SnackCard.tsx
+ ┃ ┃ ┣ 📂TopButton
+ ┃ ┃ ┃ ┣ 📜TopButton.module.css
+ ┃ ┃ ┃ ┗ 📜TopButton.tsx
+ ┃ ┃ ┣ 📂_assets
+ ┃ ┃ ┃ ┗ 📜fi-sr-shopping-cart.svg
+ ┃ ┃ ┣ 📂pangpang
+ ┃ ┃ ┃ ┣ 📜firework.scss
+ ┃ ┃ ┃ ┗ 📜page.js
+ ┃ ┃ ┣ 📜AddressSearch.tsx
+ ┃ ┃ ┣ 📜Alert.ts
+ ┃ ┃ ┣ 📜AuctionContainer.tsx
+ ┃ ┃ ┣ 📜Banner.tsx
+ ┃ ┃ ┣ 📜ImageUploader.tsx
+ ┃ ┃ ┣ 📜MainProductContainer.tsx
+ ┃ ┃ ┣ 📜MainReviewContainer.tsx
+ ┃ ┃ ┣ 📜MainShortsContainer.tsx
+ ┃ ┃ ┣ 📜SEO.tsx
+ ┃ ┃ ┗ 📜SuccessBid.ts
+ ┃ ┣ 📂store
+ ┃ ┃ ┗ 📂myInfo
+ ┃ ┃ ┃ ┣ 📜myInfo.ts
+ ┃ ┃ ┃ ┗ 📜myInfo.types.ts
+ ┃ ┣ 📜_document.tsx
+ ┃ ┣ 📜favicon.ico
+ ┃ ┣ 📜layout.tsx
+ ┃ ┣ 📜logo.png
+ ┃ ┣ 📜manifest.ts
+ ┃ ┣ 📜not-found.tsx
+ ┃ ┣ 📜page.module.css
+ ┃ ┣ 📜page.tsx
+ ┃ ┗ 📜toast.css
+ ┣ 📂constants
+ ┃ ┣ 📜ConceptEnum.ts
+ ┃ ┣ 📜CouponEnum.ts
+ ┃ ┣ 📜MaterialEnum.ts
+ ┃ ┣ 📜NotiEnum.ts
+ ┃ ┣ 📜OrderStatusEnum.ts
+ ┃ ┣ 📜PageResponseType.ts
+ ┃ ┣ 📜PointEnum.ts
+ ┃ ┣ 📜ReviewEnum.ts
+ ┃ ┣ 📜SnackTypeEnum.ts
+ ┃ ┗ 📜SortEnum.ts
+ ┣ 📂types
+ ┃ ┗ 📜images.d.ts
+ ┗ 📂utils
+ ┃ ┣ 📜usePushNotification.tsx
+ ┃ ┗ 📜useThrottle.ts
+
 ---
 
 <br>
